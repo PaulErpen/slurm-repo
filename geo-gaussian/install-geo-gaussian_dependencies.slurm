@@ -7,6 +7,7 @@
 
 # output log directory
 #SBATCH --output=logs/geogaussian/dependencies/slurm_%j.log
+#SBATCH --error=logs/geogaussian/dependencies/slurm_%j.err
 
 ## time limit: this might not work
 #SBATCH --time=08:00:00
