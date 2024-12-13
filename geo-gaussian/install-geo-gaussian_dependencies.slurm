@@ -21,6 +21,9 @@
 #SBATCH --qos=zen3_0512_a100x2
 #SBATCH --gres=gpu:1
 
+# Load python 10
+module load python/3.10
+
 ## Print some debug info
 echo "================ ================ ================ ================"
 echo "$(date)|$(hostname)|$(pwd)|$(id)"
