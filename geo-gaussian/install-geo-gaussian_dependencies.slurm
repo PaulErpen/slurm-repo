@@ -19,7 +19,7 @@
 #SBATCH --partition=zen3_0512_a100x2
 #SBATCH --qos=zen3_0512_a100x2
 #SBATCH --gres=gpu:1
-#SBATCH --mem 512G
+#SBATCH --mem 256G
 
 ## Print some debug info
 echo "================ ================ ================ ================"
@@ -31,7 +31,7 @@ python3 --version
 echo "================ ================ ================ ================"
 
 ## Run the workload
-srun --gres=gpu:1 nvidia-smi
+srun --gres=gpu:1 --mem 256G nvidia-smi
 
 ## Make sure to wait for everything to complete
 wait
