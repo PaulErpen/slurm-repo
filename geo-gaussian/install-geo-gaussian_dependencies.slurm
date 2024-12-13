@@ -29,6 +29,8 @@ nvidia-smi -L
 python3 --version
 echo "================ ================ ================ ================"
 
+chmod +x repos/slurm-repo/geo-gaussian/install-geo-gaussian_dependencies.sh
+
 ## Run the workload
 srun --gres=gpu:1 repos/slurm-repo/geo-gaussian/install-geo-gaussian_dependencies.sh
 
