@@ -5,9 +5,6 @@
 ## job name
 #SBATCH --job-name=slurm-install-geogaussian-dependencies
 
-## Number of nodes
-#SBATCH -N 1
-
 # output log directory
 #SBATCH --output=logs/geogaussian/dependencies/slurm_%j.log
 
