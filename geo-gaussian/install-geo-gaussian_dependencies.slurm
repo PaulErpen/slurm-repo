@@ -30,7 +30,7 @@ python3 --version
 echo "================ ================ ================ ================"
 
 ## Run the workload
-## srun --gres=gpu:1
+srun --gres=gpu:1 nvidia-smi
 
 ## Make sure to wait for everything to complete
 wait
