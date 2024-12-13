@@ -19,6 +19,7 @@
 #SBATCH --partition=zen3_0512_a100x2
 #SBATCH --qos=zen3_0512_a100x2
 #SBATCH --gres=gpu:1
+#SBATCH --mem 512G
 
 ## Print some debug info
 echo "================ ================ ================ ================"
