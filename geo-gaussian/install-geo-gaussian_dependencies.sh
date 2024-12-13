@@ -19,9 +19,11 @@ source "$VENV_DIR/bin/activate"
 echo "Activated virtual environment: $VENV_DIR"
 
 # install basics
-python3 -m pip install --target="libs/geogaussian" -v torch
-python3 -m pip install --target="libs/geogaussian" -v open3d
-python3 -m pip install --target="libs/geogaussian" -v plyfile
+python3 -m pip install -v torch
+python3 -m pip install -v open3d
+python3 -m pip install -v plyfile
+python3 -m pip install -v torchvision
+python3 -m pip install -v tqdm
 
 # Reset repo
 cd repos
@@ -31,5 +33,9 @@ ls
 
 # install cuda kernels
 cd GeoGaussian-capped/submodules/diff-gaussian-rasterization
+ls
+python3 -m pip install --upgrade -v .
+
+cd ../../../GeoGaussian-capped/submodules/simple-knn
 ls
 python3 -m pip install --upgrade -v .
