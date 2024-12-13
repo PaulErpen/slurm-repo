@@ -4,17 +4,14 @@ set -x
 
 # set up venv
 # Set the target directory for the virtual environment
-VENV_DIR="venv/geogaussian"
+VENV_DIR="$DATA/venv/geogaussian"
 
+# Create Virtual environment
 rm -rf "$VENV_DIR"
+python3 -m venv "$VENV_DIR"
+echo "Creating virtual environment at $VENV_DIR"
 
-# Step 1: Create the virtual environment (if it doesn't already exist)
-if [ ! -d "$VENV_DIR" ]; then
-    echo "Creating virtual environment at $VENV_DIR"
-    python3 -m venv "$VENV_DIR"
-fi
-
-# Step 2: Activate the virtual environment
+# Activate the virtual environment
 source "$VENV_DIR/bin/activate"
 echo "Activated virtual environment: $VENV_DIR"
 
