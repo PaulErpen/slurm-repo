@@ -18,8 +18,9 @@
 #SBATCH --account=p71186 
 #SBATCH --partition=zen3_0512_a100x2
 #SBATCH --qos=zen3_0512_a100x2
-#SBATCH --gres=gpu:1
-#SBATCH --mem 64G
+
+## Number of nodes
+#SBATCH -N 1
 
 ## Print some debug info
 echo "================ ================ ================ ================"
@@ -31,7 +32,7 @@ python3 --version
 echo "================ ================ ================ ================"
 
 ## Run the workload
-srun --gres=gpu:1 nvidia-smi
+srun nvidia-smi
 
 ## Make sure to wait for everything to complete
 wait
