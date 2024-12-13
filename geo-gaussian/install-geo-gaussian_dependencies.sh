@@ -19,9 +19,9 @@ source "$VENV_DIR/bin/activate"
 echo "Activated virtual environment: $VENV_DIR"
 
 # install basics
-python3 -m pip install --target="libs/geogaussian" --upgrade -v torch
-python3 -m pip install --target="libs/geogaussian" --upgrade -v open3d
-python3 -m pip install --target="libs/geogaussian" --upgrade -v plyfile
+python3 -m pip install --target="libs/geogaussian" -v torch
+python3 -m pip install --target="libs/geogaussian" -v open3d
+python3 -m pip install --target="libs/geogaussian" -v plyfile
 
 # Reset repo
 cd repos
