@@ -18,13 +18,6 @@
 #SBATCH --account=p71186 
 #SBATCH --partition=zen3_0512_a100x2
 #SBATCH --qos=zen3_0512_a100x2
-
-## Node config
-#SBATCH --nodes=1
-#SBATCH --tasks-per-node=1
-#SBATCH --cpus-per-task=1
-#SBATCH --threads-per-core=1
-#SBATCH --mem=8192mb
 #SBATCH --gres=gpu:1
 
 ## Print some debug info
