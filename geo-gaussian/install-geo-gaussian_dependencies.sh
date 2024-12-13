@@ -2,11 +2,11 @@
 set -e
 set -x
 
-module load python/3.10.8-gcc-12.2.0-65lwte3
-
 # set up venv
 # Set the target directory for the virtual environment
 VENV_DIR="venv/geogaussian"
+
+rm -rf "$VENV_DIR"
 
 # Step 1: Create the virtual environment (if it doesn't already exist)
 if [ ! -d "$VENV_DIR" ]; then
