@@ -30,7 +30,7 @@ python3 --version
 echo "================ ================ ================ ================"
 
 ## Run the workload
-srun --gres=gpu:1 nvidia-smi
+srun --gres=gpu:1 repos/slurm-repo/geo-gaussian/install-geo-gaussian_dependencies.sh
 
 ## Make sure to wait for everything to complete
 wait
